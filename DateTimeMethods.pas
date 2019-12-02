@@ -20,6 +20,9 @@ if IsLeapYear=true then
   writeln(days);
 
 function LaterInDay(p1, p2: DateTime): DateTime := p1;
+begin
+  result := ((p1.Hour*3600 + p.Minute*60 + p1.Second) > (p2.Hour*3600 + p2.Minute*60 + p2.Second);
+end;
 function LaterInYear(p1, p2: DateTime): DateTime := p1;
 function DaysInYear(year: integer): integer := 0;
 function DaysInYearRange(year1, year2: integer): integer := 0;
