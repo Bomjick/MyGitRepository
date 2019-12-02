@@ -20,7 +20,21 @@ if IsLeapYear=true then
   writeln(days);
 
 function LaterInDay(p1, p2: DateTime): DateTime := p1;
+
+
 function LaterInYear(p1, p2: DateTime): DateTime := p1;
+begin
+  readln(p1,p2);
+  if (p1.Date > p2.Date) then writeln(p1);
+  else
+  writeln(p2);
+end;
+
+    
+  
+  
+end;
+
 function DaysInYear(year: integer): integer := 0;
 function DaysInYearRange(year1, year2: integer): integer := 0;
 function SecondsInHours(hours: integer): integer := 0;
