@@ -3,7 +3,8 @@ function IsLeapYear(year: integer): boolean;
 begin
 result:=year mod 4=0;
 end;
-function DaysInMonth(month, day: integer): integer := 0;
+function DaysInMonth(month, day: integer): integer;
+begin
 if IsLeapYear=true then
   case month of
     1,3,5,7,8,10,12: days:=31;
@@ -34,7 +35,14 @@ end;
 end;
 
 function DaysInYear(year: integer): integer := 0;
-function DaysInYearRange(year1, year2: integer): integer := 0;
+function DaysInYearRange(year1, year2: integer): integer);
+begin
+  var a,b: integer;
+  a:=(IsLeapYear(year)))?366:365;
+  b:=(IsLeapYear(year)))?366:365;
+  result:=a+b
+ 
+end;
 function SecondsInHours(hours: integer): integer := 0;
 
 begin
