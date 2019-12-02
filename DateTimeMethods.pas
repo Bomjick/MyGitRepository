@@ -24,10 +24,8 @@ function LaterInDay(p1, p2: DateTime): DateTime := p1;
 
 function LaterInYear(p1, p2: DateTime): DateTime := p1;
 begin
-  readln(p1,p2);
-  if (p1.Date > p2.Date) then writeln(p1);
-  else
-  writeln(p2);
+  result := (p1.Date > p2.Date)? p1:p2;
+  
 end;
 
     
